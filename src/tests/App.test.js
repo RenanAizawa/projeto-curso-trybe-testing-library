@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
 import React from 'react';
 import App from '../App';
-import renderWithRouter from '../services/renderWithRouter';
+import renderWithRouter from '../renderWithRouter';
 
 describe('Testando o componente App', () => {
   it('Testando os links da aplicação', () => {
