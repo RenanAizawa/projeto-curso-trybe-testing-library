@@ -17,7 +17,7 @@ describe('Tetando componente Pokedex', () => {
       .map((tipo) => (expect(screen
         .getByRole('button', { name: `${tipo}` })).toBeInTheDocument()));
     fireEvent.click(screen.getByRole('button', { name: /All/i }));
-    expect(screen.getByRole('button', { name: /All/i })).toHaveBeenCalled();
+    expect(screen.getByText(/All/i)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /Próximo pokémon/i })).toBeInTheDocument();
     expect(screen.getAllByTestId('pokemon-type-button')[0]).toBeInTheDocument();
   });
